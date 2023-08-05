@@ -1,5 +1,8 @@
 {
   "expo": {
+    "experiments": {
+      "tsconfigPaths": true
+    },
     "name": "buggy-connect-ui",
     "slug": "buggy-connect-ui",
     "version": "1.0.0",
@@ -15,13 +18,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.marcelio911.buggyconnectui"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.marcelio911.buggyconnectui"
     },
     "web": {
       "favicon": "./assets/favicon.png"
