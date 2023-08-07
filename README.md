@@ -5,7 +5,7 @@ Esta aplicação foi baseada em React utilizando o `expo`:
 
 
 ```
-
+yarn && yarn start
 ```
 
 
