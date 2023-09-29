@@ -1,25 +1,24 @@
-# buggy-connect-ui
+# Next.js & NextUI Template
 
+This is a template for creating applications using Next.js 13 (pages directory) and NextUI (v2).
 
-Esta aplicação foi baseada em React utilizando o `expo`:
+## Technologies Used
 
+- [Next.js 13](https://nextjs.org/docs/getting-started)
+- [NextUI](https://nextui.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Tailwind Variants](https://tailwind-variants.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Framer Motion](https://www.framer.com/motion)
+- [next-themes](https://github.com/pacocoursey/next-themes)
 
+## How to Use
+
+To create a new project based on this template using `create-next-app`, run the following command:
+
+```bash
+npx create-next-app -e https://github.com/nextui-org/next-pages-template
 ```
-yarn && yarn start
-```
+## License
 
-
-Algumas dependências que você precisa conhecer: `expo-router` e `TailwindCSS`
-
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
-
-Use [`nativewind`](https://www.nativewind.dev/quick-starts/expo) to configure tailwindcss
-
-
-
-
-## 📝 Notas
-
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
-- [TailwindCSS](https://www.nativewind.dev/quick-starts/expo)
+Licensed under the [MIT license](https://github.com/nextui-org/next-pages-template/blob/main/LICENSE).
