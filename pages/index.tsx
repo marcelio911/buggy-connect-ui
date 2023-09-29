@@ -1,86 +1,36 @@
-import NextLink from "next/link";
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { ArrowRightIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import { Button } from "@nextui-org/react";
+import Image from "next/image";
+import { BugButton } from "@/components/common/BugButton";
+import { useState } from "react";
 
 export default function IndexPage() {
+	const [loading, setLoading] = useState(false);
 	return (
 		<DefaultLayout>
-			<h1 className="text-3xl font-bold underline">
-				Hello world!
-			</h1>
-			<div className="flex flex-wrap gap-4 items-center">
-				<Button color="primary" variant="solid">
-					Solid
-				</Button>
-				<Button color="primary" variant="faded">
-					Faded
-				</Button>
-				<Button color="primary" variant="bordered">
-					Bordered
-				</Button>
-				<Button color="primary" variant="light">
-					Light
-				</Button>
-				<Button color="primary" variant="flat">
-					Flat
-				</Button>
-				<Button color="primary" variant="ghost">
-					Ghost
-				</Button>
-				<Button color="primary" variant="shadow">
-					Shadow
-				</Button>
-			</div>
+
 			<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 				<div className="inline-block max-w-lg text-center justify-center">
-					<h1 className={title()}>Make&nbsp;</h1>
-					<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
+					<div className="inline-flex items-center justify-center rounded-md">
+						<Image src="/images/logo.svg" alt="Logo" width={111} height={56} />
+					</div>
+					<div className={"gap-4 py-8"}>
+						<Image src="/images/buggy-vehicle.svg" alt="Logo" width={282} height={198} className="inline-block"/>
+					</div>
 					<br />
-					<h1 className={title()}>
-						websites regardless of your design experience.
-					</h1>
-					<h4 className={subtitle({ class: "mt-4" })}>
-						Beautiful, fast and modern React UI library.
-					</h4>
+					<h3 className="text-lg text-current col-auto max-w-md items-center justify-center ">
+						Conectando pessoas aos passeios de Buggy mais incríveis do Brasil.
+					</h3>
 				</div>
 
-				<div className="flex gap-3">
-					<Link
-						isExternal
-						as={NextLink}
-						href={siteConfig.links.docs}
-						className={buttonStyles({
-							color: "primary",
-							radius: "full",
-							variant: "shadow",
-						})}
-					>
-						Documentation
-					</Link>
-					<Link
-						isExternal
-						as={NextLink}
-						className={buttonStyles({ variant: "bordered", radius: "full" })}
-						href={siteConfig.links.github}
-					>
-						<GithubIcon size={20} />
-						GitHub
-					</Link>
-				</div>
-
-				<div className="mt-8">
-					<Snippet hideSymbol hideCopyButton variant="bordered">
-						<span>
-							Get started by editing <Code color="primary">pages/index.tsx</Code>
-						</span>
-					</Snippet>
+				<div className="flex gap-3 mt-8">
+					<BugButton
+						destination="/sample"
+						clickHandler={()=>{setLoading(!loading); console.log('load: ', loading)}}
+						label={"Iniciar"}
+						isLoading={loading}
+						iconEnd={<ArrowRightIcon />}
+					/>
 				</div>
 			</section>
 		</DefaultLayout>

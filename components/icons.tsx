@@ -88,6 +88,33 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
 	);
 };
 
+export const ArrowRightIcon: React.FC<IconSvgProps> = ({
+	size = 24,
+	width,
+	height,
+	...props
+}) => {
+	return (
+		<svg
+			height={size || height}
+			viewBox="0 0 24 24"
+			width={size || width}
+			{...props}>
+
+			<path
+				clipRule="evenodd"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				fill="currentColor"
+				fillRule="evenodd"
+				d="M1 5h12m0 0L9 1m4 4L9 9"/>
+
+    	</svg>
+	);
+};
+
 export const MoonFilledIcon = ({
 	size = 24,
 	width,
