@@ -9,7 +9,7 @@ export default function IndexPage() {
 	return (
 		<DefaultLayout>
 
-			<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+			<section className="flex flex-col items-center justify-center gap-8 py-8 md:py-10 sm:py-8">
 				<div className="inline-block max-w-lg text-center justify-center">
 					<div className="inline-flex items-center justify-center rounded-md">
 						<Image src="/images/logo.svg" alt="Logo" width={111} height={56} />
@@ -22,8 +22,7 @@ export default function IndexPage() {
 						Conectando pessoas aos passeios de Buggy mais incríveis do Brasil.
 					</h3>
 				</div>
-
-				<div className="flex gap-3 mt-8">
+				<div className="flex flex-wrap gap-4 items-center">
 					<BugButton
 						destination="/sample"
 						clickHandler={()=>{setLoading(!loading); console.log('load: ', loading)}}
@@ -33,6 +32,16 @@ export default function IndexPage() {
 					/>
 				</div>
 			</section>
+			<div className="flex flex-wrap gap-4 items-center">
+					<BugButton
+						destination="/sample"
+						clickHandler={()=>{setLoading(!loading); console.log('load: ', loading)}}
+						label={"Iniciar"}
+						isLoading={loading}
+						iconEnd={<ArrowRightIcon />}
+					/>
+				</div>
+
 		</DefaultLayout>
 	);
 }

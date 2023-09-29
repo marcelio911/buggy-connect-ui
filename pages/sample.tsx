@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import { Button } from "@nextui-org/react";
+import { BugButton } from "@/components/common/BugButton";
 
 export default function SamplePage() {
 	return (
@@ -16,27 +16,27 @@ export default function SamplePage() {
 				Hello world!
 			</h1>
 			<div className="flex flex-wrap gap-4 items-center">
-				<Button color="primary" variant="solid">
+				<BugButton destination="/" color="primary" variant="solid">
 					Solid
-				</Button>
-				<Button color="primary" variant="faded">
+				</BugButton>
+				<BugButton destination="/" color="primary" variant="faded">
 					Faded
-				</Button>
-				<Button color="primary" variant="bordered">
+				</BugButton>
+				<BugButton destination="/" color="primary" variant="bordered">
 					Bordered
-				</Button>
-				<Button color="primary" variant="light">
+				</BugButton>
+				<BugButton destination="/" color="primary" variant="light">
 					Light
-				</Button>
-				<Button color="primary" variant="flat">
+				</BugButton>
+				<BugButton destination="/" color="primary" variant="flat">
 					Flat
-				</Button>
-				<Button color="primary" variant="ghost">
+				</BugButton>
+				<BugButton destination="/" color="primary" variant="ghost">
 					Ghost
-				</Button>
-				<Button color="primary" variant="shadow">
+				</BugButton>
+				<BugButton destination="/" color="primary" variant="shadow">
 					Shadow
-				</Button>
+				</BugButton>
 			</div>
 			<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 				<div className="inline-block max-w-lg text-center justify-center">
@@ -86,3 +86,4 @@ export default function SamplePage() {
 		</DefaultLayout>
 	);
 }
+
